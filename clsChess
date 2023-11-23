@@ -12,7 +12,7 @@ class Chess:
                 self.cur = self.con.cursor()
                 # Создание таблицы БД
                 self.cur.execute(
-                "CREATE TABLE IF NOT EXISTS country "
+                "CREATE TABLE IF NOT EXISTS Sportman "
                 "(ID INTEGER PRIMARY KEY,"
                 "lastname_s TEXT,"
                 "Date_of_Birth INTEGER,"
@@ -34,7 +34,7 @@ class Chess:
     def view(self):
 
     # просмотр всех записей в таблице БД
-     self.cur.execute("SELECT * FROM country")
+     self.cur.execute("SELECT * FROM Sportman")
     # список всех записей из таблицы
      rows = self.cur.fetchall()
      return rows
